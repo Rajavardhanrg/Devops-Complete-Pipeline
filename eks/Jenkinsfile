@@ -15,7 +15,7 @@ pipeline{
             steps{
                 script{
                     dir("terraform"){
-                        git url: 'https://github.com/ManojKRISHNAPPA/Itkannadigaru-chatbot.git',branch: 'Iac-devenv'
+                        git url: 'https://github.com/Rajavardhanrg/Devops-Complete-Pipeline.git',branch: 'main'
                     }
                 }
             }
@@ -62,7 +62,7 @@ pipeline{
                 sh '''
                     pwd 
                     cd eks/
-                    aws s3 cp terraform.tfstate s3://itkannadogaru-terraform-tf-backup/Chat-bot/dev-eks/
+                    aws s3 cp terraform.tfstate s3://rajuproject-terraform-tf-backup/Chat-bot/dev-eks/
                 '''
             }
         }
